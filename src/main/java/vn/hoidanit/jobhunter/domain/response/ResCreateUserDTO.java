@@ -4,6 +4,7 @@ import java.time.Instant;
 
 import lombok.Getter;
 import lombok.Setter;
+import vn.hoidanit.jobhunter.domain.Company;
 import vn.hoidanit.jobhunter.util.constant.GenderEnum;
 
 @Getter
@@ -16,6 +17,13 @@ public class ResCreateUserDTO {
     private String address;
     private GenderEnum gender;
     private Instant createdAt;
-    private String createdBy;
+    private CompanyUser company;
+
+    @Getter
+    @Setter
+    public static class CompanyUser {
+        private long id;
+        private String name;
+    }
 
 }

@@ -48,11 +48,11 @@ public class CompanyController {
         return ResponseEntity.ok(this.companyService.handleFetchAllCompanies(spec, pageable));
     }
 
-    @GetMapping("/companies/{id}")
-    public ResponseEntity<Company> getFetchCompanyById(@PathVariable("id") long id) {
-        Company company = this.companyService.handleFetchCompanyById(id);
-        return ResponseEntity.ok().body(company);
-    }
+    // @GetMapping("/companies/{id}")
+    // public ResponseEntity<Company> getFetchCompanyById(@PathVariable("id") long id) {
+    //     Company company = this.companyService.handleFetchCompanyById(id);
+    //     return ResponseEntity.ok().body(company);
+    // }
 
     @DeleteMapping("/companies/{id}")
     public ResponseEntity<String> deleteCompanyById(@PathVariable("id") long id) {

@@ -8,12 +8,13 @@ import lombok.Setter;
 public class ResultPaginationDTO {
     private Meta meta;
     private Object result;
+
     @Getter
     @Setter
     public static class Meta {
         private int page;
         private int pageSize;
-        private int totalPages;
-        private long totalElements;
+        private int pages;
+        private long total;
     }
 }
